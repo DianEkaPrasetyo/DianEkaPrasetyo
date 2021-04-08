@@ -3,7 +3,12 @@
 - 🌱 I’m currently learning Bahasa program
 - 📫 How to reach me 085883225988
 
----------- fitur fungsi Tugas uas ---------------
+<------------ fitur fungsi Tugas uas ---------------.
+
+On Progres!!!
+Signin & Signup pada login page untuk bisa mendaftar dan diakses beberapa orang dengan id yang berbeda
+
+
 login.php
   - berisi form login dengan session start() untuk memulai sesi login
   - jika login berhasil maka muncul alertbox berisi "Sukses Login" 
