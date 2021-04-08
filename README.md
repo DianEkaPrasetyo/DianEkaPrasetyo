@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @DianEkaPrasetyo
 - 👀 I’m interested in Coffee
-- 🌱 I’m currently learning Bahasa programing
+- 🌱 I’m currently learning Bahasa program
 - 📫 How to reach me 085883225988
 
 ---------- fitur fungsi Tugas uas ---------------
