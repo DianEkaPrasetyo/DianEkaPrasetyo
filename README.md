@@ -5,14 +5,15 @@
 
 <------------ fitur fungsi Tugas uas ---------------.
 
-On Progres!!!
-Signin & Signup pada login page untuk bisa mendaftar dan diakses beberapa orang dengan id yang berbeda
-
-
+Daftar.php
+  - User baru bisa mendaftar dan login langsung
+  - password menggunakan enkripsi md5 = 	$password = md5($_POST['password']);
+  
 login.php
   - berisi form login dengan session start() untuk memulai sesi login
   - jika login berhasil maka muncul alertbox berisi "Sukses Login" 
   - link daftar data relawan covid muncul dibawah form
+  - login menggunakan enkripsi md5 password
   
  index.php
   - disisipkan fungsi validasi cek login, jika belum login tetapi langsung direct akses ke index.php, input.php, edit.php maka akses ditolak dan lalu muncul peringatan dilanjut dengan redirect ke login page otomatis
