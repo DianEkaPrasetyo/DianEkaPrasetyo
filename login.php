@@ -1,3 +1,40 @@
+
+<?php
+session_start();
+include "koneksi.php";
+if(isset($_SESSION['login'])){
+	header('location:index.php');
+	exit;
+}
+	if(isset($_POST['login']))
+	{
+		$user = $_POST['user'];
+		$pass = md5($_POST['pass']);
+		$sql=mysqli_query($koneksi,"SELECT * FROM akun Where user='$user' and password='$pass'");
+	
+		if(mysqli_affected_rows($koneksi)>0){
+		$_SESSION['login'] = true ;
+		header('location:index.php');
+		exit;
+		}
+	}
+	
+
+
+
+
+// if (isset($_POST['login'])) {
+// 			$user = $_POST['user'];
+// 			$pass = $_POST['pass'];
+// 	if ($user === "dianeka" && $pass == "0000") {
+// 		$_SESSION['login'] = $user;
+// 		echo "<script>alert('Anda Berhasil Login')</script>";
+// 		echo "<center><br><br><blockquote id='timeEvent'><a href='index.php'>Form Data relawan</blockquote></center>";
+// 	}else {
+	
+// 	}
+// }
+ ?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -65,20 +102,7 @@
 				
             </form>
         </div>  
+		<center><blockquote><a href=daftar.php>Daftar   </center></blockquote>   
 		
-		<?php 
-session_start();
-	if (isset($_POST['login'])) {
-			$user = $_POST['user'];
-			$pass = $_POST['pass'];
-	if ($user === "dianeka" && $pass == "0000") {
-		$_SESSION['login'] = $user;
-		echo "<script>alert('Anda Berhasil Login')</script>";
-		echo "<center><br><br><blockquote id='timeEvent'><a href='index.php'>Form Data relawan</blockquote></center>";
-	}else {
-	
-	}
-}
- ?>
     </body>
 </html>
